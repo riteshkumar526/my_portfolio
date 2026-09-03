@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function(){
       }
       ringLoop();
 
-      var magnetic = document.querySelectorAll('nav a, .side-links a, .card-links a, .contact-row a, .card');
+      var magnetic = document.querySelectorAll('nav a, .side-links a, .card-links a, .contact-row a, .card, .cert-row, .cert-modal-close');
       magnetic.forEach(function(el){
         el.addEventListener('mouseenter', function(){ ring.classList.add('grow'); });
         el.addEventListener('mouseleave', function(){
@@ -60,5 +60,34 @@ document.addEventListener('DOMContentLoaded', function(){
         });
       });
     }
+  }
+
+  // Certificate modal
+  var certRows = document.querySelectorAll('.cert-row');
+  var certModal = document.getElementById('certModal');
+  var certFrame = document.getElementById('certModalFrame');
+  var certClose = document.querySelector('.cert-modal-close');
+
+  certRows.forEach(function(row){
+    row.addEventListener('click', function(){
+      var file = row.getAttribute('data-pdf');
+      certFrame.src = encodeURI(file);
+      certModal.classList.add('open');
+    });
+  });
+
+  if(certClose){
+    certClose.addEventListener('click', function(){
+      certModal.classList.remove('open');
+      certFrame.src = '';
+    });
+  }
+  if(certModal){
+    certModal.addEventListener('click', function(e){
+      if(e.target === certModal){
+        certModal.classList.remove('open');
+        certFrame.src = '';
+      }
+    });
   }
 });
