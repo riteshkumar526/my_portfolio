@@ -332,6 +332,24 @@ footer{
   left:0;
   color:var(--rust);
 }
+/* RESUME BUTTON — sidebar, sits above nav */
+.resume-btn{
+  display:inline-block;
+  margin-top:18px;
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.72rem;
+  text-decoration:none;
+  color:var(--paper);
+  background:var(--moss);
+  padding:8px 14px;
+  border:1px solid var(--moss);
+  transition:background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+.resume-btn:hover{
+  background:var(--rust);
+  border-color:var(--rust);
+  transform:translateY(-2px);
+}
 
 @media (max-width:820px){
   .cert-modal-frame{width:94vw; height:80vh;}
