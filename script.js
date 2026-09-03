@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function(){
       }
       ringLoop();
 
-      var magnetic = document.querySelectorAll('nav a, .side-links a, .card-links a, .contact-row a, .card, .cert-row, .cert-modal-close');
+      var magnetic = document.querySelectorAll('nav a, .side-links a, .card-links a, .contact-row a, .card, .cert-row, .cert-modal-close, .resume-btn');
       magnetic.forEach(function(el){
         el.addEventListener('mouseenter', function(){ ring.classList.add('grow'); });
         el.addEventListener('mouseleave', function(){
