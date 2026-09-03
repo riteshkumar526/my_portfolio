@@ -164,27 +164,33 @@
       </div>
     </section>
 
-    <section id="certificates">
-      <p class="eyebrow">My Certificates</p>
-      <h2>Courses & certificates</h2>
-      <div class="index-list reveal">
-        <div class="index-row">
-          <div class="no">01</div>
-          <div class="cat">Python</div>
-          <div class="items">Cursa</div>
-        </div>
-        <div class="index-row">
-          <div class="no">02</div>
-          <div class="cat">Intro to Artificial Intelligence</div>
-          <div class="items">Simplilearn · Skillup</div>
-        </div>
-        <div class="index-row">
-          <div class="no">03</div>
-          <div class="cat">Intro to Microsoft Excel</div>
-          <div class="items">Simplilearn · Skillup · Microsoft</div>
-        </div>
-      </div>
-    </section>
+   <section id="certificates">
+  <p class="eyebrow">My Certificates</p>
+  <h2>Courses & certificates</h2>
+  <div class="index-list reveal">
+    <div class="index-row cert-row" data-pdf="python_certificate.pdf">
+      <div class="no">01</div>
+      <div class="cat">Python</div>
+      <div class="items">Cursa · View →</div>
+    </div>
+    <div class="index-row cert-row" data-pdf="aicertificate.pdf">
+      <div class="no">02</div>
+      <div class="cat">Intro to Artificial Intelligence</div>
+      <div class="items">Simplilearn · Skillup · View →</div>
+    </div>
+    <div class="index-row cert-row" data-pdf="ms excel certificate.pdf">
+      <div class="no">03</div>
+      <div class="cat">Intro to Microsoft Excel</div>
+      <div class="items">Simplilearn · Skillup · Microsoft · View →</div>
+    </div>
+  </div>
+</section>
+
+<!-- Certificate modal -->
+<div id="certModal" class="cert-modal">
+  <span class="cert-modal-close">&times;</span>
+  <iframe id="certModalFrame" class="cert-modal-frame"></iframe>
+</div>
 
     <section id="contact">
       <p class="eyebrow">Contact</p>
